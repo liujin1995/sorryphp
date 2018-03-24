@@ -10,7 +10,7 @@ try {
     $result = $cosClient->upload(
         //bucket的命名规则为你的{bucketname}-{appid} ，此处填写的存储桶名称必须为此格式，APPID在https://console.cloud.tencent.com/cam/capi找
         $bucket='gifpublic-1251660866',
-        $key =$filename,
+        $key ="gif/".$filename,
         $body = fopen("tmp_t/".$filename, 'rb'));
 	unlink("tmp_t/".$filename);
     return $result;
