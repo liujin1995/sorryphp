@@ -28,7 +28,7 @@ Dialogue: 0,0:00:03.00,0:00:04.80,Default,,0,0,0,,{mx.sentences1}
 Dialogue: 0,0:00:05.80,0:00:07.80,Default,,0,0,0,,{mx.sentences2}
 Dialogue: 0,0:00:07.80,0:00:09.50,Default,,0,0,0,,{mx.sentences3}
 Dialogue: 0,0:00:09.90,0:00:10.90,Default,,0,0,0,,{mx.sentences4}
-Dialogue: 0,0:00:10.90,0:00:12.60,Default,,0,0,0,,{mx.sentences5}
+Dialogue: 0,0:00:11.50,0:00:12.70,Default,,0,0,0,,{mx.sentences5}
 Dialogue: 0,0:00:13.30,0:00:16.50,Default,,0,0,0,,{mx.sentences6}
 Dialogue: 0,0:00:17.70,0:00:18.90,Default,,0,0,0,,{mx.sentences7}
 Dialogue: 0,0:00:18.90,0:00:19.90,Default,,0,0,0,,{mx.sentences8}
