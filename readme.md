@@ -14,7 +14,9 @@ centOS安装字体,不安装这个，生成可能会报错
 
 	yum groupinstall "fonts"
 
-
+tmp_t目录必须777权限！
+	
+	
 [测试地址](https://www.unique-liu.com/demo/sorry/)
 请求create.php?str=好啊%3B别说我是一等良民%3B就算你们真的想要诬告我%3B我有的是钱找律师帮我打官司%3B我想我根本不用坐牢%3B你别以为有钱了不起啊%3Bsorry+有钱是真的能为所欲为的%3B不过我相信你不会明白这种感觉%3B不明白+不明白
 以;分割
