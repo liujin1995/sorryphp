@@ -11,8 +11,8 @@ try {
         //bucket的命名规则为你的{bucketname}-{appid} ，此处填写的存储桶名称必须为此格式，APPID在https://console.cloud.tencent.com/cam/capi找
         $bucket='gifpublic-1251660866',
         $key =$filename,
-        $body = fopen("gif_tmp/".$filename, 'rb'));
-	unlink("gif_tmp/".$filename);
+        $body = fopen("tmp_t/".$filename, 'rb'));
+	unlink("tmp_t/".$filename);
     return $result;
 } catch (\Exception $e) {
     return "$e\n";
@@ -31,7 +31,7 @@ $tx=str_replace($re_str,$arr[$i],$tx);
 
    $numbytes = file_put_contents("tmp_t/".$fn.".ftl", $tx); 
    if($numbytes){
-$cmd_str="ffmpeg -i t/template.mp4 -r 5 -vf ass=tmp_t/".$fn.".ftl,scale=180:-1 -y gif_tmp/".$fn.".gif ";
+$cmd_str="ffmpeg -i t/template.mp4 -r 5 -vf ass=tmp_t/".$fn.".ftl,scale=240:-1 -y tmp_t/".$fn.".gif ";
 $res = shell_exec($cmd_str);
 unlink("tmp_t/".$fn.".ftl");
 return $fn.".gif";
