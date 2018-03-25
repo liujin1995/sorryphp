@@ -14,7 +14,7 @@ centOS安装字体,不安装这个，生成可能会报错
 
 	yum groupinstall "fonts"
 
-tmp_t目录必须777权限！
+tmp_t目录必须777权限！另外，必须开启shell_exec
 	
 	
 [测试地址](https://www.unique-liu.com/demo/sorry/)
