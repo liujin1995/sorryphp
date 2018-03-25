@@ -43,9 +43,12 @@ return $fn.".gif";
 $str=$_GET["str"];//每句话用;分割
 $di_g_n=md5($str);
 $str=explode(";",$str);
-
+$isqcloud=false;//是否开启腾讯云对象储存
 $di=getgif($str,$di_g_n);
 if($di!="error"){
+	
+	if($isqcloud){
+	//上传到云储存后会删除本地的gif
 	//Region:https://cloud.tencent.com/document/product/436/6224  选择就近的
 	//secretId、secretKey在https://console.cloud.tencent.com/cam/capi
 $sec_arr=array('region' => 'ap-guangzhou',
@@ -56,6 +59,10 @@ $sec_arr=array('region' => 'ap-guangzhou',
 	//$arr=$arr[structure];//data;
 
 	echo $arr[Location];
-
+	}else{
+		//保留本地的gif，直接抛出
+		echo "tmp_t/".$di;
+		
+	}
 }
 
