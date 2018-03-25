@@ -65,4 +65,4 @@ $sec_arr=array('region' => 'ap-guangzhou',
 		
 	}
 }
-
+//生产环境在PHP7.2，理论支撑PHP7
