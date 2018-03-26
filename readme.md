@@ -3,7 +3,7 @@
 <p>centOS下ffmpeg安装</p>
 <p>[选择自己的版本](http://li.nux.ro/download/nux/dextop/)</p>   
 <p>http://li.nux.ro/download/nux/dextop/el6/i386/nux-dextop-release-0-3.el6.nux.noarch.rpm</p>
-<p>我服务器是centos6 32位，所以是上面这个</p>
+<p>我服务器是centos6 PHP32位，所以是上面这个</p>
 
 	yum install epel-release -y
 	rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
