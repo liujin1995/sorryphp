@@ -18,9 +18,9 @@ try {
     return "$e\n";
 }
 }
-function getgif($arr,$fn){
-$tx= file_get_contents('t/template.ftl');
-for($i=0;$i<9;$i++){
+function getgif($arr,$fn,$name,$tp_i){
+$tx= file_get_contents('t/'.$name.'.ftl');
+for($i=0;$i<$tp_i;$i++){
 $re_str="{mx.sentences".$i."}";
 if($i>count($arr)){
 $tx=str_replace($re_str,"",$tx);
@@ -31,7 +31,7 @@ $tx=str_replace($re_str,$arr[$i],$tx);
 
    $numbytes = file_put_contents("tmp_t/".$fn.".ftl", $tx); 
    if($numbytes){
-$cmd_str="ffmpeg -i t/template.mp4 -r 5 -vf ass=tmp_t/".$fn.".ftl,scale=240:-1 -y tmp_t/".$fn.".gif ";
+$cmd_str="ffmpeg -i t/".$name.".mp4 -r 5 -vf ass=tmp_t/".$fn.".ftl,scale=240:-1 -y tmp_t/".$fn.".gif ";
 $res = shell_exec($cmd_str);
 unlink("tmp_t/".$fn.".ftl");
 return $fn.".gif";
@@ -41,10 +41,19 @@ return $fn.".gif";
 
 }
 $str=$_GET["str"];//每句话用;分割
+$type=$_GET["t"];//生成的类型，参数1,2,3,4，对应的1-sorry，2-乌蝇哥，3-梁非凡，4-王境泽
 $di_g_n=md5($str);
 $str=explode(";",$str);
 $isqcloud=false;//是否开启腾讯云对象储存
-$di=getgif($str,$di_g_n);
+switch ($type) {
+    case "1": $template_name="template";$tp_i=9;break;
+    case "2": $template_name="wyg";$tp_i=6;break;
+    case "3": $template_name="lff";$tp_i=11;break;
+    case "4": $template_name="wjz";$tp_i=4;break;    
+    default: $template_name="template";$tp_i=9;
+}
+
+$di=getgif($str,$di_g_n,$template_name,$tp_i);
 if($di!="error"){
 	
 	if($isqcloud){
