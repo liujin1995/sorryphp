@@ -3,7 +3,7 @@
 <p>centOS下ffmpeg安装</p>
 <p>[选择自己的版本](http://li.nux.ro/download/nux/dextop/)</p>   
 <p>http://li.nux.ro/download/nux/dextop/el6/i386/nux-dextop-release-0-3.el6.nux.noarch.rpm</p>
-<p>我服务器是centos6 32位，所以是上面这个</p>
+<p>我服务器是centos6 PHP32位，所以是上面这个</p>
 
 	yum install epel-release -y
 	rpm --import http://li.nux.ro/download/nux/RPM-GPG-KEY-nux.ro
@@ -19,7 +19,11 @@
 	
 <p>[测试地址](https://www.unique-liu.com/demo/sorry/)</p>
 <p>请求</p>
+<<<<<<< HEAD
 <p>create.php?t=1&str=好啊%3B别说我是一等良民%3B就算你们真的想要诬告我%3B我有的是钱找律师帮我打官司%3B我想我根本不用坐牢%3B你别以为有钱了不起啊%3Bsorry+有钱是真的能为所欲为的%3B不过我相信你不会明白这种感觉%3B不明白+不明白</p>
+=======
+<p>create.php?str=好啊%3B别说我是一等良民%3B就算你们真的想要诬告我%3B我有的是钱找律师帮我打官司%3B我想我根本不用坐牢%3B你别以为有钱了不起啊%3Bsorry+有钱是真的能为所欲为的%3B不过我相信你不会明白这种感觉%3B不明白+不明白&t=1</p>
+>>>>>>> 15ec6c48fb97a960430ed07464434f4cd21df992
 <p>以;分割</p>
 
 
